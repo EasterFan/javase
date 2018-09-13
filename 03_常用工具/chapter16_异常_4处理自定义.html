@@ -1,0 +1,806 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>chapter16_异常_4处理自定义 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter17_多线程_1概述.html" />
+    
+    
+    <link rel="prev" href="chapter16_异常_3处理throw.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01_JAVA介绍/">
+            
+                <a href="../01_JAVA介绍/">
+            
+                    
+                    01_JAVA介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01_JAVA介绍/chapter01_介绍.html">
+            
+                <a href="../01_JAVA介绍/chapter01_介绍.html">
+            
+                    
+                    chapter01_介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01_JAVA介绍/chapter02_变量和常量.html">
+            
+                <a href="../01_JAVA介绍/chapter02_变量和常量.html">
+            
+                    
+                    chapter02_变量和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01_JAVA介绍/chapter03_数据类型.html">
+            
+                <a href="../01_JAVA介绍/chapter03_数据类型.html">
+            
+                    
+                    chapter03_数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01_JAVA介绍/chapter04_运算符.html">
+            
+                <a href="../01_JAVA介绍/chapter04_运算符.html">
+            
+                    
+                    chapter04_运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01_JAVA介绍/chapter05_流程控制.html">
+            
+                <a href="../01_JAVA介绍/chapter05_流程控制.html">
+            
+                    
+                    chapter05_流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01_JAVA介绍/chapter06_数组.html">
+            
+                <a href="../01_JAVA介绍/chapter06_数组.html">
+            
+                    
+                    chapter06_数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01_JAVA介绍/chapter07_方法.html">
+            
+                <a href="../01_JAVA介绍/chapter07_方法.html">
+            
+                    
+                    chapter07_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02_面向对象/">
+            
+                <a href="../02_面向对象/">
+            
+                    
+                    02_面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02_面向对象/chapter08_面向对象_1概述.html">
+            
+                <a href="../02_面向对象/chapter08_面向对象_1概述.html">
+            
+                    
+                    chapter08_面向对象_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02_面向对象/chapter08_面向对象_2包管理.html">
+            
+                <a href="../02_面向对象/chapter08_面向对象_2包管理.html">
+            
+                    
+                    chapter08_面向对象_2包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02_面向对象/chapter09_封装.html">
+            
+                <a href="../02_面向对象/chapter09_封装.html">
+            
+                    
+                    chapter09_封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02_面向对象/chapter10_单例模式.html">
+            
+                <a href="../02_面向对象/chapter10_单例模式.html">
+            
+                    
+                    chapter10_单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02_面向对象/chapter11_继承_1概述.html">
+            
+                <a href="../02_面向对象/chapter11_继承_1概述.html">
+            
+                    
+                    chapter11_继承_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../02_面向对象/chapter11_继承_2抽象类.html">
+            
+                <a href="../02_面向对象/chapter11_继承_2抽象类.html">
+            
+                    
+                    chapter11_继承_2抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../02_面向对象/chapter11_继承_3接口.html">
+            
+                <a href="../02_面向对象/chapter11_继承_3接口.html">
+            
+                    
+                    chapter11_继承_3接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../02_面向对象/chapter12_多态.html">
+            
+                <a href="../02_面向对象/chapter12_多态.html">
+            
+                    
+                    chapter12_多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../02_面向对象/chapter13_内部类.html">
+            
+                <a href="../02_面向对象/chapter13_内部类.html">
+            
+                    
+                    chapter13_内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../02_面向对象/chapter14_包装类.html">
+            
+                <a href="../02_面向对象/chapter14_包装类.html">
+            
+                    
+                    chapter14_包装类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../02_面向对象/chapter15_常用类_1Object.html">
+            
+                <a href="../02_面向对象/chapter15_常用类_1Object.html">
+            
+                    
+                    chapter15_常用类_1Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../02_面向对象/chapter15_常用类_2String.html">
+            
+                <a href="../02_面向对象/chapter15_常用类_2String.html">
+            
+                    
+                    chapter15_常用类_2String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    03_常用工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="chapter16_异常_1概述.html">
+            
+                <a href="chapter16_异常_1概述.html">
+            
+                    
+                    chapter16_异常_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="chapter16_异常_2处理_trycatch.html">
+            
+                <a href="chapter16_异常_2处理_trycatch.html">
+            
+                    
+                    chapter16_异常_2处理_trycatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="chapter16_异常_3处理throw.html">
+            
+                <a href="chapter16_异常_3处理throw.html">
+            
+                    
+                    chapter16_异常_3处理throw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="chapter16_异常_4处理自定义.html">
+            
+                <a href="chapter16_异常_4处理自定义.html">
+            
+                    
+                    chapter16_异常_4处理自定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="chapter17_多线程_1概述.html">
+            
+                <a href="chapter17_多线程_1概述.html">
+            
+                    
+                    chapter17_多线程_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="chapter17_多线程_2线程生命周期.html">
+            
+                <a href="chapter17_多线程_2线程生命周期.html">
+            
+                    
+                    chapter17_多线程_2线程生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="chapter17_多线程_3线程管理同步和通信.html">
+            
+                <a href="chapter17_多线程_3线程管理同步和通信.html">
+            
+                    
+                    chapter17_多线程_3线程管理同步和通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="chapter18_IO流.html">
+            
+                <a href="chapter18_IO流.html">
+            
+                    
+                    chapter18_IO流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="chapter19_集合_1概述.html">
+            
+                <a href="chapter19_集合_1概述.html">
+            
+                    
+                    chapter19_集合_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="chapter19_集合_2List.html">
+            
+                <a href="chapter19_集合_2List.html">
+            
+                    
+                    chapter19_集合_2List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="chapter19_集合_3Set.html">
+            
+                <a href="chapter19_集合_3Set.html">
+            
+                    
+                    chapter19_集合_3Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="chapter19_集合_4Map.html">
+            
+                <a href="chapter19_集合_4Map.html">
+            
+                    
+                    chapter19_集合_4Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="chapter19_集合_5泛型.html">
+            
+                <a href="chapter19_集合_5泛型.html">
+            
+                    
+                    chapter19_集合_5泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="chapter19_集合_6集合工具类.html">
+            
+                <a href="chapter19_集合_6集合工具类.html">
+            
+                    
+                    chapter19_集合_6集合工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >chapter16_异常_4处理自定义</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4E00;-&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;">&#x4E00;. &#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;</h2>
+<blockquote>
+<p>&#x56E0;&#x4E3A;&#x9879;&#x76EE;&#x4E2D;&#x4F1A;&#x51FA;&#x73B0;&#x7279;&#x6709;&#x7684;&#x95EE;&#x9898;(&#x8BE5;&#x7C7B;&#x95EE;&#x9898;&#x5E76;&#x6CA1;&#x6709;&#x88AB; java &#x63CF;&#x8FF0;&#x5E76;&#x5C01;&#x88C5;&#x6210;&#x5BF9;&#x8C61;)&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<strong>&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;</strong>&#x63CF;&#x8FF0;&#x7279;&#x5B9A;&#x4E1A;&#x52A1;&#x4EA7;&#x751F;&#x7684;&#x5F02;&#x5E38;&#x7C7B;&#x578B;  </p>
+</blockquote>
+<h3 id="1-&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x7684;&#x7279;&#x70B9;">1. &#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x7684;&#x7279;&#x70B9;</h3>
+<ol>
+<li>&#x6240;&#x8C13;&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;,&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7C7B;,&#x53BB;<strong>&#x7EE7;&#x627F;Throwable&#x7C7B;</strong>&#x6216;&#x8005;&#x5B83;&#x7684;&#x5B50;&#x7C7B;(Exception)&#x3002;<br>&#x63A8;&#x8350;&#x7EE7;&#x627F; Exception &#x7C7B;, &#x56E0;&#x4E3A; Exception &#x662F; Throwable &#x7684;&#x5B50;&#x7C7B;, &#x62E5;&#x6709;&#x66F4;&#x4E30;&#x5BCC;&#x7684;&#x65B9;&#x6CD5;, &#x5982;&#x679C;&#x60F3;&#x8981;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;&#x4F53;&#x7CFB;,&#x5219;&#x7EE7;&#x627F; Throwable.  </li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5F02;&#x5E38;&#x7C7B;, java &#x5E76;&#x4E0D;&#x8BA4;&#x8BC6;, &#x9700;&#x8981;&#x624B;&#x52A8;<strong>&#x5EFA;&#x7ACB;&#x5BF9;&#x8C61;</strong>&#x5E76;&#x629B;&#x51FA;(throw).  </li>
+<li>&#x5F53;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x5DF2;&#x7ECF;&#x7528;<strong>throw</strong>&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x5BF9;&#x8C61;,&#x90A3;&#x5C31;&#x5FC5;&#x987B;&#x8981;&#x7ED9;&#x51FA;&#x5BF9;&#x5E94;&#x7684;&#x5904;&#x7406;&#x52A8;&#x4F5C;(&#x4E24;&#x79CD;&#x5904;&#x7406;&#x65B9;&#x5F0F;)  <ul>
+<li>&#x5728;&#x51FD;&#x6570;&#x540D;&#x5904; throws &#x58F0;&#x660E;&#x5F02;&#x5E38;</li>
+<li>&#x81EA;&#x5DF1; try  catch &#x5904;&#x7406;</li>
+</ul>
+</li>
+<li>&#x7236;&#x7C7B; Throwable &#x4E2D;&#x5DF2;&#x7ECF;&#x628A;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x5B8C;&#x6210;&#x4E86;,&#x5B50;&#x7C7B;&#x53EA;&#x9700;&#x8981;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;, &#x4F7F;&#x7528;<code>super(String msg)</code>&#x4F20;&#x5165;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x5373;&#x53EF;.&#x7136;&#x540E;&#x7528;<code>getMessage()</code>&#x83B7;&#x5F97;&#x8BE5;&#x53C2;&#x6570;.  </li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x8981;&#x7EE7;&#x627F;&#x5F02;&#x5E38;&#x7C7B;?<br>&#x56E0;&#x4E3A;(Throwable)&#x5F02;&#x5E38;&#x4F53;&#x7CFB;&#x5177;&#x5907;&#x4E00;&#x4E2A;&#x7279;&#x70B9;:  <strong>&#x5F02;&#x5E38;&#x7C7B;</strong>&#x548C;<strong>&#x5F02;&#x5E38;&#x5BF9;&#x8C61;</strong>&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x629B;&#x51FA;, &#x4F7F;&#x7A0B;&#x5E8F;&#x53D1;&#x751F;&#x8DF3;&#x8F6C; ,&#x7EE7;&#x627F;&#x540E;,&#x7A0B;&#x5E8F;&#x5C31;&#x6709;&#x4E86;&#x8DF3;&#x8F6C;&#x529F;&#x80FD;.<br>&#x4E14;&#x53EA;&#x6709;&#x8FD9;&#x4E2A;&#x4F53;&#x7CFB;&#x4E2D;&#x7684;&#x7C7B;&#x548C;&#x5BF9;&#x8C61;&#x624D;&#x53EF;&#x4EE5;&#x88AB; throw &#x548C; throws &#x64CD;&#x4F5C;.  </li>
+</ol>
+<h3 id="2-&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x7C7B;&#x7684;&#x5199;&#x6CD5;">2. &#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x7C7B;&#x7684;&#x5199;&#x6CD5;</h3>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x7C7B;&#x7684;&#x5199;&#x6CD5;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FuShuException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span></span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> value;
+   <span class="hljs-comment">// &#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+    FuShuException(){
+        <span class="hljs-keyword">super</span>();
+    }
+
+    <span class="hljs-comment">// &#x63A5;&#x6536;&#x5B50;&#x7C7B;&#x5F02;&#x5E38;&#x4FE1;&#x606F;</span>
+    FuShuException(String msg,<span class="hljs-keyword">int</span> value){
+        <span class="hljs-keyword">super</span>(msg);
+        <span class="hljs-keyword">this</span>.value = value;
+    }
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x8F93;&#x5165;&#x7684;&#x8D1F;&#x6570;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> value;
+    }
+}
+</code></pre>
+<p><a href="https://github.com/EasterFan/JavaExercise/blob/master/ExceptionProj/src/_05_CustomThrowFushu.java" target="_blank">&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x7C7B; -- &#x88AB;&#x9664;&#x6570;&#x4E0D;&#x4E3A;&#x8D1F;&#x6570;</a><br><a href="https://github.com/EasterFan/JavaExercise/blob/master/ExceptionProj/src/_05_CustomThrow.java" target="_blank">&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x7C7B;--&#x7F51;&#x5427;&#x5E74;&#x9F84;&#x9650;&#x5236;</a>  </p>
+<h2 id="&#x4E8C;-runtimeexception-&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;">&#x4E8C;. RuntimeException &#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;</h2>
+<blockquote>
+<p>&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;,&#x4E5F;&#x8BB8;&#x662F;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;,&#x662F;&#x7528;&#x6237;&#x9519;&#x8BEF;&#x8F93;&#x5165;(&#x7A7A;&#x6307;&#x9488;, &#x6570;&#x7EC4;&#x4E0B;&#x6807;&#x8D8A;&#x754C;, &#x7B97;&#x672F;&#x5F02;&#x5E38;, &#x7C7B;&#x578B;&#x8F6C;&#x6362;)&#x9020;&#x6210;&#x7684;,&#x8C03;&#x7528;&#x8005;&#x4E0D;&#x65B9;&#x4FBF;&#x5904;&#x7406;,&#x76F4;&#x63A5;&#x6302;&#x6389;,&#x8BA9;&#x7528;&#x6237;&#x91CD;&#x65B0;&#x8F93;&#x5165;</p>
+</blockquote>
+<h3 id="1-&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;&#x7279;&#x70B9;">1. &#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;&#x7279;&#x70B9;</h3>
+<ol>
+<li>&#x5728;&#x51FD;&#x6570;&#x5185;&#x624B;&#x52A8;&#x629B;&#x51FA;&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;&#x65F6;,&#x4E0D;&#x9700;&#x8981;&#x5728;&#x51FD;&#x6570;&#x540D;&#x5904;&#x7528;<code>throws</code>&#x58F0;&#x660E;.&#x7F16;&#x8BD1;&#x901A;&#x8FC7;  </li>
+<li>&#x5982;&#x679C;&#x5728;&#x51FD;&#x6570;&#x4E0A;&#x58F0;&#x660E;&#x4E86;&#x8BE5;&#x5F02;&#x5E38;, &#x8C03;&#x7528;&#x8005;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5904;&#x7406;,&#x7F16;&#x8BD1;&#x4E00;&#x6837;&#x901A;&#x8FC7;.  </li>
+<li>&#x4E4B;&#x6240;&#x4EE5;&#x8FD9;&#x6837;&#x8BBE;&#x8BA1;, &#x4E0D;&#x5728;&#x51FD;&#x6570;&#x540D;&#x5904;&#x58F0;&#x660E;, &#x662F;&#x4E3A;&#x4E86;&#x4E0D;&#x8BA9;&#x8C03;&#x7528;&#x8005;&#x5904;&#x7406;&#x5F02;&#x5E38;, &#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;,&#x76F4;&#x63A5;&#x6302;&#x6389;,&#x7136;&#x540E;&#x8BA9;&#x7A0B;&#x5E8F;&#x5458;&#x4FEE;&#x6B63;&#x4EE3;&#x7801;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x65F6;, &#x5982;&#x679C;&#x8BE5;&#x5F02;&#x5E38;&#x7684;&#x53D1;&#x751F;, &#x662F;&#x7528;&#x6237;&#x9519;&#x8BEF;&#x8F93;&#x5165;&#x9020;&#x6210;&#x7684;,&#x8C03;&#x7528;&#x8005;&#x4E5F;&#x4E0D;&#x65B9;&#x4FBF;&#x5904;&#x7406;, &#x5C31;&#x8BA9;&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x7EE7;&#x627F; <strong>RuntmeException</strong></li>
+<li>&#x666E;&#x901A;&#x5F02;&#x5E38;&#x53D1;&#x751F;&#x540E;, &#x901A;&#x8FC7; throws &#x6216; trycatch &#x5904;&#x7406;&#x5F02;&#x5E38;,&#x53EF;&#x4EE5;&#x8BA9;&#x7A0B;&#x5E8F;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;<br>RuntimeExcetion &#x7684;&#x5F02;&#x5E38;&#x53D1;&#x751F;&#x540E;, &#x4E0D;&#x8981;&#x58F0;&#x660E; throws, &#x4E5F;&#x4E0D;&#x8981;&#x7528; trycatch &#x5904;&#x7406;, &#x76EE;&#x7684;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x8BA9;&#x7A0B;&#x5E8F;,&#x5728;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#x53D1;&#x751F;&#x540E;, &#x9A6C;&#x4E0A;&#x505C;&#x6B62;.<br>&#x5982;&#x679C;&#x8C03;&#x7528;&#x8005;&#x7528; trycatch &#x5904;&#x7406;&#x4E86; RuntimeException &#x5F02;&#x5E38;, &#x7A0B;&#x5E8F;&#x5C31;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;,&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x8FD0;&#x884C;.<br>&#x4F46;&#x662F;,&#x6211;&#x4EEC;&#x4F7F;&#x7528;RuntimeException&#x7684;&#x76EE;&#x7684;&#x5C31;&#x5728;&#x4E8E;:  &#x8BA9;&#x7A0B;&#x5E8F;&#x5C31;&#x505C;&#x5728;&#x8FD9;&#x91CC;, &#x4E0D;&#x8981;&#x5F80;&#x4E0B;&#x8FD0;&#x884C;&#x4E86;(&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x5173;&#x952E;&#x5F02;&#x5E38;&#x5DF2;&#x7ECF;&#x51FA;&#x73B0;, &#x518D;&#x5F80;&#x4E0B;&#x5DF2;&#x7ECF;&#x6CA1;&#x6709;&#x8BA1;&#x7B97;&#x7684;&#x5FC5;&#x8981;&#x4E86;)</li>
+</ol>
+<p><a href="https://github.com/EasterFan/JavaExercise/blob/master/ExceptionProj/src/_10_RunTimeExceptionTest.java" target="_blank">RuntimeException - &#x76F4;&#x63A5;&#x8BA9;&#x7A0B;&#x5E8F;&#x6302;&#x6389;&#x7684;&#x4F7F;&#x7528;</a>  </p>
+<h2 id="&#x4E09;-&#x5F02;&#x5E38;&#x94FE;">&#x4E09;. &#x5F02;&#x5E38;&#x94FE;</h2>
+<h3 id="1-&#x5F02;&#x5E38;&#x4E0E;&#x7EE7;&#x627F;&#x5173;&#x7CFB;">1. &#x5F02;&#x5E38;&#x4E0E;&#x7EE7;&#x627F;&#x5173;&#x7CFB;</h3>
+<blockquote>
+<p>&#x5F02;&#x5E38;&#x5728;&#x5B50;&#x7236;&#x7C7B;&#x8986;&#x76D6;&#x4E2D;&#x7684;&#x4F53;&#x73B0;</p>
+</blockquote>
+<h6 id="11-&#x7236;&#x7C7B;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;">1.1 &#x7236;&#x7C7B;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;</h6>
+<blockquote>
+<ol>
+<li>&#x5B50;&#x7C7B;&#x65B9;&#x6CD5;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#x8303;&#x56F4; &lt;= &#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#x8303;&#x56F4;  </li>
+<li>&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x4E2D;, &#x5B50;&#x7C7B;&#x91CD;&#x5199;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;,&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;,&#x53EA;&#x80FD;&#x662F;<strong>&#x7236;&#x7C7B;&#x5F02;&#x5E38;</strong>&#x6216;&#x8005;<strong>&#x7236;&#x7C7B;&#x5F02;&#x5E38;&#x7684;&#x5B50;&#x5F02;&#x5E38;</strong>.  </li>
+<li>&#x5373;: &#x5B50;&#x7C7B;&#x91CD;&#x5199;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;, &#x5B50;&#x7C7B;&#x7684;&#x5F02;&#x5E38;&#x53EA;&#x80FD;&#x662F;&#x7236;&#x7C7B;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x7684;&#x5F02;&#x5E38;, &#x6216;&#x8005;&#x7236;&#x7C7B;&#x7684;&#x5B50;&#x5F02;&#x5E38;, &#x5B50;&#x7C7B;&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x65B0;&#x5F02;&#x5E38;.  </li>
+</ol>
+</blockquote>
+<p>&#x5982;&#x679C;&#x5B50;&#x7C7B;&#x975E;&#x8981;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x5F02;&#x5E38;, &#x53EA;&#x80FD;&#x5728;&#x5B50;&#x7C7B;&#x5185;&#x90E8; trycatch, &#x81EA;&#x884C;&#x89E3;&#x51B3;&#x5F02;&#x5E38;, &#x4E0D;&#x80FD;&#x7528; <code>throws</code>&#x629B;&#x51FA;  </p>
+<p><a href="https://github.com/EasterFan/JavaExercise/blob/master/ExceptionProj/src/_09_ExtendsInExceptionTest.java" target="_blank">&#x5F02;&#x5E38;&#x4E0E;&#x7EE7;&#x627F;--&#x5B50;&#x7C7B;&#x5F02;&#x5E38;&lt;=&#x7236;&#x7C7B;&#x5F02;&#x5E38;</a>  </p>
+<h6 id="12-&#x7236;&#x7C7B;&#x591A;&#x5F02;&#x5E38;">1.2 &#x7236;&#x7C7B;&#x591A;&#x5F02;&#x5E38;</h6>
+<blockquote>
+<p>&#x5982;&#x679C;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x629B;&#x51FA;&#x591A;&#x4E2A;&#x5F02;&#x5E38;, &#x90A3;&#x4E48;&#x5B50;&#x7C7B;&#x5728;&#x8986;&#x76D6;&#x65B9;&#x6CD5;&#x65F6;,&#x53EA;&#x80FD;&#x629B;&#x51FA;&#x7236;&#x7C7B;&#x5F02;&#x5E38;&#x7684;&#x5B50;&#x96C6;.  </p>
+</blockquote>
+<p>&#x82E5;&#x7236;&#x7C7B;throws&#x4E86;5&#x4E2A;&#x5F02;&#x5E38;: A B C D E<br>&#x5219;&#x5B50;&#x7C7B;&#x53EA;&#x80FD; throws 5 &#x4E2A;&#x4EE5;&#x4E0B;&#x7684;&#x5F02;&#x5E38;</p>
+<h6 id="13-&#x7236;&#x7C7B;&#x591A;&#x5F02;&#x5E38;">1.3 &#x7236;&#x7C7B;&#x591A;&#x5F02;&#x5E38;</h6>
+<blockquote>
+<p> &#x82E5;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x65E0;&#x5F02;&#x5E38;&#x629B;&#x51FA;, &#x5219;&#x5B50;&#x7C7B;&#x91CD;&#x5199;&#x7684;&#x65B9;&#x6CD5;,&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x4EFB;&#x4F55;&#x5F02;&#x5E38;,&#x82E5;&#x5B50;&#x7C7B;&#x5FC5;&#x987B;&#x8981;&#x629B;&#x51FA;&#x5F02;&#x5E38;,&#x53EA;&#x80FD;&#x5728;&#x5B50;&#x7C7B;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x81EA;&#x884C; trycatch &#x89E3;&#x51B3;.&#x7EDD;&#x5BF9;&#x4E0D;&#x80FD;throws&#x629B;&#x51FA;.  </p>
+</blockquote>
+<h3 id="2-&#x5F02;&#x5E38;&#x94FE;---&#x83B7;&#x53D6;&#x524D;&#x9762;&#x7684;&#x5F02;&#x5E38;">2. &#x5F02;&#x5E38;&#x94FE; - &#x83B7;&#x53D6;&#x524D;&#x9762;&#x7684;&#x5F02;&#x5E38;</h3>
+<p>&#x5728;&#x5F02;&#x5E38;&#x94FE;&#x4E2D;&#xFF0C;&#x6700;&#x540E;&#x7684;&#x5F02;&#x5E38;&#x4F1A;&#x8986;&#x76D6;&#x524D;&#x9762;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x600E;&#x6837;&#x83B7;&#x53D6;&#x524D;&#x9762;&#x88AB;&#x8986;&#x76D6;&#x7684;&#x5F02;&#x5E38;&#x5462;&#xFF1F;  </p>
+<p><a href="https://github.com/EasterFan/JavaExercise/blob/master/ExceptionProj/src/_06_ThroableLine.java" target="_blank">&#x5F02;&#x5E38;&#x94FE;</a><br>&#x5148;&#x5728;&#x524D;&#x51E0;&#x4E2A;&#x5F02;&#x5E38;&#x4E2D;&#x5C01;&#x88C5;e  </p>
+<pre><code class="lang-java"><span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;&#x6211;&#x662F;test2&#x4E2D;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&quot;</span>,e);
+</code></pre>
+<p>&#x6700;&#x540E;&#x629B;&#x51FA;&#x7684;&#x65F6;&#x5019;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x5BF9;&#x8C61;e1&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x524D;&#x51E0;&#x4E2A;&#x5F02;&#x5E38;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x5C01;&#x88C5;&#x524D;&#x4E24;&#x4E2A;&#x5F02;&#x5E38;</span>
+            Exception e1 = <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;&#x6211;&#x662F;test3&#x4E2D;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&quot;</span>);
+            e1.initCause(e);
+            <span class="hljs-keyword">throw</span> e1;
+</code></pre>
+<p><a href="https://github.com/EasterFan/JavaExercise/blob/master/ExceptionProj/src/_07_ThrowsInherianceSon.java" target="_blank">&#x5F02;&#x5E38;&#x94FE; - &#x5F02;&#x5E38;&#x4E2D;&#x7684;&#x5B50;&#x7C7B;</a>  </p>
+<p><a href="https://github.com/EasterFan/JavaExercise/blob/master/ExceptionProj/src/_08_TeacherExceptionTest.java" target="_blank">&#x5F02;&#x5E38;&#x6848;&#x4F8B; -- &#x8001;&#x5E08;&#x8BB2;&#x8BFE;&#x5F02;&#x5E38;!</a>  </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter16_异常_3处理throw.html" class="navigation navigation-prev " aria-label="Previous page: chapter16_异常_3处理throw">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter17_多线程_1概述.html" class="navigation navigation-next " aria-label="Next page: chapter17_多线程_1概述">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"chapter16_异常_4处理自定义","level":"1.4.4","depth":2,"next":{"title":"chapter17_多线程_1概述","level":"1.4.5","depth":2,"path":"03_常用工具/chapter17_多线程_1概述.md","ref":"03_常用工具/chapter17_多线程_1概述.md","articles":[]},"previous":{"title":"chapter16_异常_3处理throw","level":"1.4.3","depth":2,"path":"03_常用工具/chapter16_异常_3处理throw.md","ref":"03_常用工具/chapter16_异常_3处理throw.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03_常用工具/chapter16_异常_4处理自定义.md","mtime":"2018-03-12T10:21:03.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-21T04:09:57.821Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

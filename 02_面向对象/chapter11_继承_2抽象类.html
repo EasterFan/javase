@@ -1,0 +1,761 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>chapter11_继承_2抽象类 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter11_继承_3接口.html" />
+    
+    
+    <link rel="prev" href="chapter11_继承_1概述.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01_JAVA介绍/">
+            
+                <a href="../01_JAVA介绍/">
+            
+                    
+                    01_JAVA介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01_JAVA介绍/chapter01_介绍.html">
+            
+                <a href="../01_JAVA介绍/chapter01_介绍.html">
+            
+                    
+                    chapter01_介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01_JAVA介绍/chapter02_变量和常量.html">
+            
+                <a href="../01_JAVA介绍/chapter02_变量和常量.html">
+            
+                    
+                    chapter02_变量和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01_JAVA介绍/chapter03_数据类型.html">
+            
+                <a href="../01_JAVA介绍/chapter03_数据类型.html">
+            
+                    
+                    chapter03_数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01_JAVA介绍/chapter04_运算符.html">
+            
+                <a href="../01_JAVA介绍/chapter04_运算符.html">
+            
+                    
+                    chapter04_运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01_JAVA介绍/chapter05_流程控制.html">
+            
+                <a href="../01_JAVA介绍/chapter05_流程控制.html">
+            
+                    
+                    chapter05_流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01_JAVA介绍/chapter06_数组.html">
+            
+                <a href="../01_JAVA介绍/chapter06_数组.html">
+            
+                    
+                    chapter06_数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01_JAVA介绍/chapter07_方法.html">
+            
+                <a href="../01_JAVA介绍/chapter07_方法.html">
+            
+                    
+                    chapter07_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    02_面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="chapter08_面向对象_1概述.html">
+            
+                <a href="chapter08_面向对象_1概述.html">
+            
+                    
+                    chapter08_面向对象_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="chapter08_面向对象_2包管理.html">
+            
+                <a href="chapter08_面向对象_2包管理.html">
+            
+                    
+                    chapter08_面向对象_2包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="chapter09_封装.html">
+            
+                <a href="chapter09_封装.html">
+            
+                    
+                    chapter09_封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="chapter10_单例模式.html">
+            
+                <a href="chapter10_单例模式.html">
+            
+                    
+                    chapter10_单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="chapter11_继承_1概述.html">
+            
+                <a href="chapter11_继承_1概述.html">
+            
+                    
+                    chapter11_继承_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="chapter11_继承_2抽象类.html">
+            
+                <a href="chapter11_继承_2抽象类.html">
+            
+                    
+                    chapter11_继承_2抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="chapter11_继承_3接口.html">
+            
+                <a href="chapter11_继承_3接口.html">
+            
+                    
+                    chapter11_继承_3接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="chapter12_多态.html">
+            
+                <a href="chapter12_多态.html">
+            
+                    
+                    chapter12_多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="chapter13_内部类.html">
+            
+                <a href="chapter13_内部类.html">
+            
+                    
+                    chapter13_内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="chapter14_包装类.html">
+            
+                <a href="chapter14_包装类.html">
+            
+                    
+                    chapter14_包装类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="chapter15_常用类_1Object.html">
+            
+                <a href="chapter15_常用类_1Object.html">
+            
+                    
+                    chapter15_常用类_1Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="chapter15_常用类_2String.html">
+            
+                <a href="chapter15_常用类_2String.html">
+            
+                    
+                    chapter15_常用类_2String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03_常用工具/">
+            
+                <a href="../03_常用工具/">
+            
+                    
+                    03_常用工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_常用工具/chapter16_异常_1概述.html">
+            
+                <a href="../03_常用工具/chapter16_异常_1概述.html">
+            
+                    
+                    chapter16_异常_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_常用工具/chapter16_异常_2处理_trycatch.html">
+            
+                <a href="../03_常用工具/chapter16_异常_2处理_trycatch.html">
+            
+                    
+                    chapter16_异常_2处理_trycatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03_常用工具/chapter16_异常_3处理throw.html">
+            
+                <a href="../03_常用工具/chapter16_异常_3处理throw.html">
+            
+                    
+                    chapter16_异常_3处理throw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03_常用工具/chapter16_异常_4处理自定义.html">
+            
+                <a href="../03_常用工具/chapter16_异常_4处理自定义.html">
+            
+                    
+                    chapter16_异常_4处理自定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03_常用工具/chapter17_多线程_1概述.html">
+            
+                <a href="../03_常用工具/chapter17_多线程_1概述.html">
+            
+                    
+                    chapter17_多线程_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03_常用工具/chapter17_多线程_2线程生命周期.html">
+            
+                <a href="../03_常用工具/chapter17_多线程_2线程生命周期.html">
+            
+                    
+                    chapter17_多线程_2线程生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03_常用工具/chapter17_多线程_3线程管理同步和通信.html">
+            
+                <a href="../03_常用工具/chapter17_多线程_3线程管理同步和通信.html">
+            
+                    
+                    chapter17_多线程_3线程管理同步和通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03_常用工具/chapter18_IO流.html">
+            
+                <a href="../03_常用工具/chapter18_IO流.html">
+            
+                    
+                    chapter18_IO流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03_常用工具/chapter19_集合_1概述.html">
+            
+                <a href="../03_常用工具/chapter19_集合_1概述.html">
+            
+                    
+                    chapter19_集合_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../03_常用工具/chapter19_集合_2List.html">
+            
+                <a href="../03_常用工具/chapter19_集合_2List.html">
+            
+                    
+                    chapter19_集合_2List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../03_常用工具/chapter19_集合_3Set.html">
+            
+                <a href="../03_常用工具/chapter19_集合_3Set.html">
+            
+                    
+                    chapter19_集合_3Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../03_常用工具/chapter19_集合_4Map.html">
+            
+                <a href="../03_常用工具/chapter19_集合_4Map.html">
+            
+                    
+                    chapter19_集合_4Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../03_常用工具/chapter19_集合_5泛型.html">
+            
+                <a href="../03_常用工具/chapter19_集合_5泛型.html">
+            
+                    
+                    chapter19_集合_5泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../03_常用工具/chapter19_集合_6集合工具类.html">
+            
+                <a href="../03_常用工具/chapter19_集合_6集合工具类.html">
+            
+                    
+                    chapter19_集合_6集合工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >chapter11_继承_2抽象类</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>&#x62BD;&#x8C61;&#x7C7B;&#x4E0E;&#x666E;&#x901A;&#x7C7B;&#x533A;&#x522B;: 1. &#x591A;&#x4E86;&#x62BD;&#x8C61;&#x65B9;&#x6CD5; 2. &#x4E0D;&#x80FD;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;</p>
+</blockquote>
+<h2 id="&#x4E00;-&#x5173;&#x4E8E;&#x62BD;&#x8C61;&#x7C7B;">&#x4E00;. &#x5173;&#x4E8E;&#x62BD;&#x8C61;&#x7C7B;</h2>
+<p>Animal&#x8FD9;&#x4E2A;&#x7236;&#x7C7B;&#x4E2D;&#x6709;eat&#x65B9;&#x6CD5;&#xFF0C;Cat&#x5B50;&#x7C7B;&#x4E2D;&#x4E5F;&#x6709;eat&#x65B9;&#x6CD5;&#xFF0C;&#x7236;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x53EA;&#x662F;&#x8BF4;&#x660E;&#x4E86;&#x5B50;&#x7C7B;&#x90FD;&#x5C06;&#x5177;&#x6709;<strong>&#x5403;</strong>&#x8FD9;&#x4E2A;&#x80FD;&#x529B;&#xFF0C;&#x5177;&#x4F53;&#x600E;&#x6837;&#x5403;&#xFF0C;&#x5403;&#x4EC0;&#x4E48;&#xFF0C;&#x8FD9;&#x4E9B;&#x90FD;&#x7531;&#x5177;&#x4F53;&#x5B50;&#x7C7B;&#x81EA;&#x5DF1;&#x53BB;&#x5199;&#x3002;  </p>
+<p>&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x4E2D;&#x7684;eat&#x65B9;&#x6CD5;&#x4E86;&#xFF0C;&#x66F4;&#x8FD1;&#x4E00;&#x6B65;&#xFF0C;&#x7236;&#x7C7B;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x90FD;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x4EF7;&#x503C;(&#x6709;&#x91CD;&#x5199;&#x4EF7;&#x503C;)&#xFF0C;&#x518D;&#x8FDB;&#x4E00;&#x6B65;&#xFF0C;&#x5BF9;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x4E5F;&#x5C31;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x4E86;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A;&#x7236;&#x7C7B;&#x8BBE;&#x7F6E;&#x4E3A;abstract&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x8FD9;&#x6837;&#x7236;&#x7C7B;&#x5C31;&#x4E0D;&#x80FD;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x4E86;&#x3002;  </p>
+<p>&#x4E00;&#x53E5;&#x8BDD;&#x603B;&#x7ED3;&#x62BD;&#x8C61;&#x7C7B;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;  </p>
+<blockquote>
+<p>&#x67D0;&#x4E2A;&#x7236;&#x7C7B;&#x53EA;&#x662F;&#x53EA;&#x662F;&#x77E5;&#x9053;&#x5176;&#x5B50;&#x7C7B;&#x5E94;&#x8BE5;&#x5305;&#x542B;&#x54EA;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x65E0;&#x6CD5;&#x77E5;&#x9053;&#x8FD9;&#x4E9B;&#x5B50;&#x7C7B;&#x5982;&#x4F55;&#x53BB;&#x5B9E;&#x73B0;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x3002;  </p>
+</blockquote>
+<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E2A;&#x7236;&#x7C7B;&#x5E94;&#x88AB;&#x8BBE;&#x4E3A;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x7236;&#x7C7B;&#x6709;&#x91CD;&#x5199;&#x4EF7;&#x503C;,&#x6CA1;&#x6709;&#x5B9E;&#x4F8B;&#x5316;&#x4EF7;&#x503C;&#x3002;  </p>
+<p>&#x62BD;&#x8C61;&#x7684;&#x610F;&#x4E49;:  <strong>&#x5F3A;&#x8FEB;</strong>&#x5B50;&#x7C7B;&#x91CD;&#x5199;&#x65B9;&#x6CD5;.</p>
+<p>&#x62BD;&#x8C61;&#x5316;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x786E;&#x5B9E;&#x8981;&#x7528;&#x5230;&#x7236;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5411;&#x4E0A;&#x8F6C;&#x578B;&#x7684;&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x3002;  </p>
+<pre><code class="lang-java">Animal animal = <span class="hljs-keyword">new</span> Cat();
+animal.eat();
+</code></pre>
+<p><strong>&#x7406;&#x89E3;&#x62BD;&#x8C61;</strong>:<br>&#x7C7B;&#x62BD;&#x8C61;&#x6210;&#x8D85;&#x7C7B; -- &#x884C;&#x4E3A;&#x76F8;&#x4F3C;;<br>&#x5BF9;&#x8C61;&#x62BD;&#x8C61;&#x6210;&#x7C7B; -- &#x5C5E;&#x6027;&#x76F8;&#x4F3C;;
+&#x53D1;&#x73B0;&#x7C7B;&#x7684;&#x4E3B;&#x8981;&#x65B9;&#x6CD5;,<br>&#x5148;&#x6709;&#x62BD;&#x8C61;,&#x901A;&#x8FC7;&#x62BD;&#x8C61;&#x5F97;&#x51FA;&#x7C7B;,<br>&#x540E;&#x901A;&#x8FC7;&#x7EE7;&#x627F;&#x8868;&#x8FBE;&#x62BD;&#x8C61;&#x6548;&#x679C;.</p>
+<p><strong>&#x62BD;&#x8C61;&#x7C7B; --- &#x5F3A;&#x8C03;&#x4E00;&#x7EC4;&#x4E8B;&#x7269;&#x7684;&#x76F8;&#x4F3C;&#x6027;,&#x5305;&#x62EC;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x7684;&#x76F8;&#x4F3C;&#x6027;.</strong>  </p>
+<h2 id="&#x4E8C;-&#x62BD;&#x8C61;&#x7C7B;&#x7684;&#x7279;&#x70B9;">&#x4E8C;. &#x62BD;&#x8C61;&#x7C7B;&#x7684;&#x7279;&#x70B9;</h2>
+<ol>
+<li>&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x4E00;&#x5B9A;&#x8981;&#x5728;&#x62BD;&#x8C61;&#x7C7B;&#x4E2D;,&#x62BD;&#x8C61;&#x7C7B;&#x4E2D;&#x6709;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x548C;&#x975E;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;</li>
+<li><code>abstract</code>&#x4FEE;&#x9970;&#x7C7B;&#x548C;&#x65B9;&#x6CD5;,&#x4E0D;&#x80FD;&#x4FEE;&#x9970;&#x53D8;&#x91CF;</li>
+<li>&#x62BD;&#x8C61;&#x7C7B;&#x4E0D;&#x53EF;&#x4EE5; new &#x5BF9;&#x8C61;, &#x62BD;&#x8C61;&#x7C7B;&#x6CA1;&#x6709;&#x5B9E;&#x4F8B;&#x4EF7;&#x503C;,&#x53EA;&#x6709;&#x91CD;&#x5199;&#x4EF7;&#x503C;</li>
+<li>&#x62BD;&#x8C61;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x5982;&#x679C;&#x8981;&#x88AB;&#x4F7F;&#x7528;,&#x5FC5;&#x987B;&#x7531;&#x5B50;&#x7C7B;&#x91CD;&#x5199;<strong>&#x6240;&#x6709;</strong>&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x540E;,&#x5EFA;&#x7ACB;&#x5B50;&#x7C7B;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;,&#x5982;&#x679C;&#x5B50;&#x7C7B;&#x53EA;&#x91CD;&#x5199;&#x4E86;&#x90E8;&#x5206;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;,&#x90A3;&#x4E48;<strong>&#x8BE5;&#x5B50;&#x7C7B;&#x8FD8;&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;</strong>  </li>
+<li>&#x62BD;&#x8C61;&#x7C7B;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x6CA1;&#x6709;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;---&#x76EE;&#x7684;&#x5728;&#x4E8E;,&#x4E0D;&#x8BA9;&#x8FD9;&#x4E2A;&#x7C7B;&#x5B9E;&#x4F8B;&#x5316;</li>
+</ol>
+<h2 id="&#x4E09;-&#x5173;&#x4E8E;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;">&#x4E09;. &#x5173;&#x4E8E;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;</h2>
+<ol>
+<li>&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x7684;&#x5199;&#x6CD5;---&#x4E0D;&#x5141;&#x8BB8;&#x6709;&#x65B9;&#x6CD5;&#x4F53;  </li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<ol>
+<li>&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x4E0E;&#x4FEE;&#x9970;&#x7B26;---&#x56E0;&#x4E3A;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x662F;&#x8981;&#x88AB;&#x5B50;&#x7C7B;&#x8BBF;&#x95EE;&#x91CD;&#x5199;&#x7684;&#xFF0C;&#x6240;&#x4EE5;<strong>private/final/static</strong>&#x8FD9;3&#x4E2A;&#x4FEE;&#x9970;&#x7B26;&#x4E0D;&#x80FD;&#x4E0E;abstarct&#x540C;&#x65F6;&#x4F7F;&#x7528;
+<a href="https://github.com/EasterFan/JavaExercise/blob/master/objectInitInInherihance/src/com/easter/Abstract/Empolee.java" target="_blank">&#x7EE7;&#x627F;-&#x62BD;&#x8C61;&#x65B9;&#x6CD5;-&#x5458;&#x5DE5;&#x7ECF;&#x7406;&#x7C7B;</a></li>
+</ol>
+<h2 id="&#x56DB;-abstract-&#x4F7F;&#x7528;----&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x56DB;. abstract &#x4F7F;&#x7528; -- &#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h2>
+<blockquote>
+<p>&#x786E;&#x5B9A;&#x7684;&#x90E8;&#x5206;&#x5199;&#x6210;&#x6A21;&#x677F;(&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x88AB;&#x540E;&#x4EBA;&#x91CD;&#x5199;&#x4FEE;&#x6539;,&#x5219;&#x5B9A;&#x4E49;&#x6210;final&#x7C7B;), &#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x65B9;&#x6CD5;&#x90E8;&#x5206;&#x66B4;&#x9732;&#x51FA;&#x53BB;(&#x53EF;&#x5199;&#x6210;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;),&#x8BA9;&#x540E;&#x9762;&#x7684;&#x4EBA;&#x91CD;&#x5199;&#x5B8C;&#x5584;.  </p>
+</blockquote>
+<p><a href="https://github.com/EasterFan/JavaExercise/blob/master/objectInitInInherihance/src/com/easter/Abstract/Template.java" target="_blank">&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F; - &#x8BA1;&#x7B97;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x95F4;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter11_继承_1概述.html" class="navigation navigation-prev " aria-label="Previous page: chapter11_继承_1概述">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter11_继承_3接口.html" class="navigation navigation-next " aria-label="Next page: chapter11_继承_3接口">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"chapter11_继承_2抽象类","level":"1.3.6","depth":2,"next":{"title":"chapter11_继承_3接口","level":"1.3.7","depth":2,"path":"02_面向对象/chapter11_继承_3接口.md","ref":"02_面向对象/chapter11_继承_3接口.md","articles":[]},"previous":{"title":"chapter11_继承_1概述","level":"1.3.5","depth":2,"path":"02_面向对象/chapter11_继承_1概述.md","ref":"02_面向对象/chapter11_继承_1概述.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02_面向对象/chapter11_继承_2抽象类.md","mtime":"2018-03-12T10:21:03.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-21T04:09:57.821Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

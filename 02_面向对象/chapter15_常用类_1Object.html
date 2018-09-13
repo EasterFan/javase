@@ -1,0 +1,754 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>chapter15_常用类_1Object · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter15_常用类_2String.html" />
+    
+    
+    <link rel="prev" href="chapter14_包装类.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01_JAVA介绍/">
+            
+                <a href="../01_JAVA介绍/">
+            
+                    
+                    01_JAVA介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01_JAVA介绍/chapter01_介绍.html">
+            
+                <a href="../01_JAVA介绍/chapter01_介绍.html">
+            
+                    
+                    chapter01_介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01_JAVA介绍/chapter02_变量和常量.html">
+            
+                <a href="../01_JAVA介绍/chapter02_变量和常量.html">
+            
+                    
+                    chapter02_变量和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01_JAVA介绍/chapter03_数据类型.html">
+            
+                <a href="../01_JAVA介绍/chapter03_数据类型.html">
+            
+                    
+                    chapter03_数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01_JAVA介绍/chapter04_运算符.html">
+            
+                <a href="../01_JAVA介绍/chapter04_运算符.html">
+            
+                    
+                    chapter04_运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01_JAVA介绍/chapter05_流程控制.html">
+            
+                <a href="../01_JAVA介绍/chapter05_流程控制.html">
+            
+                    
+                    chapter05_流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01_JAVA介绍/chapter06_数组.html">
+            
+                <a href="../01_JAVA介绍/chapter06_数组.html">
+            
+                    
+                    chapter06_数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01_JAVA介绍/chapter07_方法.html">
+            
+                <a href="../01_JAVA介绍/chapter07_方法.html">
+            
+                    
+                    chapter07_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    02_面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="chapter08_面向对象_1概述.html">
+            
+                <a href="chapter08_面向对象_1概述.html">
+            
+                    
+                    chapter08_面向对象_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="chapter08_面向对象_2包管理.html">
+            
+                <a href="chapter08_面向对象_2包管理.html">
+            
+                    
+                    chapter08_面向对象_2包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="chapter09_封装.html">
+            
+                <a href="chapter09_封装.html">
+            
+                    
+                    chapter09_封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="chapter10_单例模式.html">
+            
+                <a href="chapter10_单例模式.html">
+            
+                    
+                    chapter10_单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="chapter11_继承_1概述.html">
+            
+                <a href="chapter11_继承_1概述.html">
+            
+                    
+                    chapter11_继承_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="chapter11_继承_2抽象类.html">
+            
+                <a href="chapter11_继承_2抽象类.html">
+            
+                    
+                    chapter11_继承_2抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="chapter11_继承_3接口.html">
+            
+                <a href="chapter11_继承_3接口.html">
+            
+                    
+                    chapter11_继承_3接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="chapter12_多态.html">
+            
+                <a href="chapter12_多态.html">
+            
+                    
+                    chapter12_多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="chapter13_内部类.html">
+            
+                <a href="chapter13_内部类.html">
+            
+                    
+                    chapter13_内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="chapter14_包装类.html">
+            
+                <a href="chapter14_包装类.html">
+            
+                    
+                    chapter14_包装类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.11" data-path="chapter15_常用类_1Object.html">
+            
+                <a href="chapter15_常用类_1Object.html">
+            
+                    
+                    chapter15_常用类_1Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="chapter15_常用类_2String.html">
+            
+                <a href="chapter15_常用类_2String.html">
+            
+                    
+                    chapter15_常用类_2String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03_常用工具/">
+            
+                <a href="../03_常用工具/">
+            
+                    
+                    03_常用工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_常用工具/chapter16_异常_1概述.html">
+            
+                <a href="../03_常用工具/chapter16_异常_1概述.html">
+            
+                    
+                    chapter16_异常_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_常用工具/chapter16_异常_2处理_trycatch.html">
+            
+                <a href="../03_常用工具/chapter16_异常_2处理_trycatch.html">
+            
+                    
+                    chapter16_异常_2处理_trycatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03_常用工具/chapter16_异常_3处理throw.html">
+            
+                <a href="../03_常用工具/chapter16_异常_3处理throw.html">
+            
+                    
+                    chapter16_异常_3处理throw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03_常用工具/chapter16_异常_4处理自定义.html">
+            
+                <a href="../03_常用工具/chapter16_异常_4处理自定义.html">
+            
+                    
+                    chapter16_异常_4处理自定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03_常用工具/chapter17_多线程_1概述.html">
+            
+                <a href="../03_常用工具/chapter17_多线程_1概述.html">
+            
+                    
+                    chapter17_多线程_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03_常用工具/chapter17_多线程_2线程生命周期.html">
+            
+                <a href="../03_常用工具/chapter17_多线程_2线程生命周期.html">
+            
+                    
+                    chapter17_多线程_2线程生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03_常用工具/chapter17_多线程_3线程管理同步和通信.html">
+            
+                <a href="../03_常用工具/chapter17_多线程_3线程管理同步和通信.html">
+            
+                    
+                    chapter17_多线程_3线程管理同步和通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03_常用工具/chapter18_IO流.html">
+            
+                <a href="../03_常用工具/chapter18_IO流.html">
+            
+                    
+                    chapter18_IO流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03_常用工具/chapter19_集合_1概述.html">
+            
+                <a href="../03_常用工具/chapter19_集合_1概述.html">
+            
+                    
+                    chapter19_集合_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../03_常用工具/chapter19_集合_2List.html">
+            
+                <a href="../03_常用工具/chapter19_集合_2List.html">
+            
+                    
+                    chapter19_集合_2List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../03_常用工具/chapter19_集合_3Set.html">
+            
+                <a href="../03_常用工具/chapter19_集合_3Set.html">
+            
+                    
+                    chapter19_集合_3Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../03_常用工具/chapter19_集合_4Map.html">
+            
+                <a href="../03_常用工具/chapter19_集合_4Map.html">
+            
+                    
+                    chapter19_集合_4Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../03_常用工具/chapter19_集合_5泛型.html">
+            
+                <a href="../03_常用工具/chapter19_集合_5泛型.html">
+            
+                    
+                    chapter19_集合_5泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../03_常用工具/chapter19_集合_6集合工具类.html">
+            
+                <a href="../03_常用工具/chapter19_集合_6集合工具类.html">
+            
+                    
+                    chapter19_集合_6集合工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >chapter15_常用类_1Object</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>Object &#x7C7B;&#x662F;&#x6240;&#x6709;&#x7C7B;&#x7684;&#x7236;&#x7C7B;</p>
+</blockquote>
+<h2 id="&#x4E00;-object-&#x7C7B;&#x7684;&#x7279;&#x70B9;">&#x4E00;. Object &#x7C7B;&#x7684;&#x7279;&#x70B9;</h2>
+<ol>
+<li>&#x7EE7;&#x627F;&#x4E2D;&#x6240;&#x6709;&#x7C7B;&#x90FD;&#x76F4;&#x63A5;/&#x95F4;&#x63A5;&#x7EE7;&#x627F; Object &#x7C7B;,  </li>
+<li>&#x6240;&#x6709;&#x5B50;&#x7C7B;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x7B2C;&#x4E00;&#x884C;&#x90FD;&#x662F;<code>super()</code>,Object&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x6CA1;&#x6709;<code>super()</code>  </li>
+</ol>
+<h2 id="&#x4E8C;-object-&#x7C7B;&#x65B9;&#x6CD5;">&#x4E8C;. Object &#x7C7B;&#x65B9;&#x6CD5;</h2>
+<h4 id="1-euqals">1. euqals()</h4>
+<ol>
+<li>java&#x4E2D;&#x8BA4;&#x4E3A;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x90FD;&#x5177;&#x6709;&#x53EF;&#x6BD4;&#x6027;,equals &#x6BD4;&#x8F83;&#x7684;&#x662F;&#x590D;&#x5408;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;  </li>
+<li>&#x5BF9;&#x4E8E;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;,<code>==</code>&#x6BD4;&#x8F83;&#x7684;&#x662F;&#x503C;<br>&#x5BF9;&#x4E8E;&#x590D;&#x5408;&#x6570;&#x636E;&#x7C7B;&#x578B;,<code>==</code>&#x548C;<code>equals</code>&#x6BD4;&#x8F83;&#x7684;&#x662F;&#x5806;&#x5185;&#x5B58;&#x5730;&#x5740;.  </li>
+<li><strong>String,Integer,Date&#x5728;&#x8FD9;&#x4E9B;&#x7C7B;&#x5F53;&#x4E2D;equals&#x88AB;&#x91CD;&#x5199;,&#x6709;&#x5176;&#x81EA;&#x8EAB;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x4E0D;&#x518D;&#x662F;&#x6BD4;&#x8F83;&#x7C7B;&#x5728;&#x5806;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5B58;&#x653E;&#x5730;&#x5740;&#x4E86;&#x3002;</strong>  </li>
+<li><code>equals(Object obj)</code>&#x672C;&#x8EAB;&#x662F;&#x591A;&#x6001;&#x7684;&#x5E94;&#x7528;, obj &#x662F;&#x7236;&#x7C7B;,&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x8981;&#x5411;&#x4E0B;&#x8F6C;&#x578B;.<br><a href="https://github.com/EasterFan/JavaExercise/blob/master/PolyProj/src/com/easter/mytest.java" target="_blank">&#x591A;&#x6001; -- Object&#x5411;&#x4E0B;&#x8F6C;&#x578B;</a>  </li>
+</ol>
+<h4 id="2-tostring&#x548C;hashcode">2. toString()&#x548C;hashCode()</h4>
+<ol>
+<li>java&#x8BA4;&#x4E3A;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x90FD;&#x53EF;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;(&#x5373;&#x54C8;&#x5E0C;&#x503C;)&#x6253;&#x5370;  </li>
+<li>toString&#x6253;&#x5370;&#x7684;&#x662F;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;, &#x7236;&#x7C7B;&#x4E2D;&#x8FD9;&#x6837;&#x6253;&#x5370;&#x6CA1;&#x6709;&#x610F;&#x4E49;,&#x5F88;&#x591A;&#x7C7B;&#x90FD;&#x91CD;&#x5199; toString   </li>
+<li>hashCode&#x6253;&#x5370;&#x7684;&#x662F;&#x5341;&#x8FDB;&#x5236;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;  </li>
+</ol>
+<pre><code class="lang-java">    MyDemo d1 = <span class="hljs-keyword">new</span> MyDemo(<span class="hljs-number">4</span>);
+    System.out.println(d1.toString());
+        System.out.println(Integer.toHexString(d1.hashCode()));
+</code></pre>
+<h4 id="3-getclass">3. getClass()</h4>
+<blockquote>
+<p>&#x5BF9;&#x8C61;&#x90FD;&#x662F;&#x4F9D;&#x8D56;&#x4E8E;&#x7C7B;&#x6587;&#x4EF6;&#x4EA7;&#x751F;&#x7684;, &#x8FD9;&#x4E9B;&#x7C7B;&#x6587;&#x4EF6;(&#x7F16;&#x8BD1;&#x540E;&#x7684;class&#x6587;&#x4EF6;)&#x90FD;&#x6709;&#x540D;&#x79F0;,&#x6784;&#x9020;&#x51FD;&#x6570;,&#x4E00;&#x822C;&#x65B9;&#x6CD5;,&#x6240;&#x4EE5;&#x7528; <strong>Class &#x7C7B;</strong>&#x6765;&#x63CF;&#x8FF0;&#x8FD9;&#x4E9B;class&#x6587;&#x4EF6;.  </p>
+</blockquote>
+<ol>
+<li>getClass&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x83B7;&#x5F97;&#x8BE5;&#x7C7B;&#x7F16;&#x8BD1;&#x540E;&#x7684; class &#x6587;&#x4EF6;.  </li>
+<li>&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#x540E;&#x7684;class&#x6587;&#x4EF6;&#x5F97;&#x5230;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x53D8;&#x91CF;,&#x65B9;&#x6CD5;,&#x6784;&#x9020;&#x51FD;&#x6570;&#x7B49;, &#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5C31;&#x53EB;&#x505A;java&#x7684;<strong>&#x53CD;&#x7F16;&#x8BD1;</strong>  </li>
+<li>&#x901A;&#x8FC7; getClass &#x62FF;&#x5230;<strong>.java&#x6587;&#x4EF6;</strong>&#x7F16;&#x8BD1;&#x540E;&#x7684;<strong>.class&#x6587;&#x4EF6;</strong>&#x540E;,&#x53EF;&#x4EE5;&#x505A;&#x4EC0;&#x4E48;,&#x53C2;&#x89C1; API &#x4E2D;&#x7684;Class&#x7C7B;  </li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter14_包装类.html" class="navigation navigation-prev " aria-label="Previous page: chapter14_包装类">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter15_常用类_2String.html" class="navigation navigation-next " aria-label="Next page: chapter15_常用类_2String">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"chapter15_常用类_1Object","level":"1.3.11","depth":2,"next":{"title":"chapter15_常用类_2String","level":"1.3.12","depth":2,"path":"02_面向对象/chapter15_常用类_2String.md","ref":"02_面向对象/chapter15_常用类_2String.md","articles":[]},"previous":{"title":"chapter14_包装类","level":"1.3.10","depth":2,"path":"02_面向对象/chapter14_包装类.md","ref":"02_面向对象/chapter14_包装类.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02_面向对象/chapter15_常用类_1Object.md","mtime":"2018-03-12T10:21:03.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-21T04:09:57.821Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

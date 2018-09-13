@@ -1,0 +1,818 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>chapter13_内部类 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter14_包装类.html" />
+    
+    
+    <link rel="prev" href="chapter12_多态.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01_JAVA介绍/">
+            
+                <a href="../01_JAVA介绍/">
+            
+                    
+                    01_JAVA介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01_JAVA介绍/chapter01_介绍.html">
+            
+                <a href="../01_JAVA介绍/chapter01_介绍.html">
+            
+                    
+                    chapter01_介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01_JAVA介绍/chapter02_变量和常量.html">
+            
+                <a href="../01_JAVA介绍/chapter02_变量和常量.html">
+            
+                    
+                    chapter02_变量和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01_JAVA介绍/chapter03_数据类型.html">
+            
+                <a href="../01_JAVA介绍/chapter03_数据类型.html">
+            
+                    
+                    chapter03_数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01_JAVA介绍/chapter04_运算符.html">
+            
+                <a href="../01_JAVA介绍/chapter04_运算符.html">
+            
+                    
+                    chapter04_运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01_JAVA介绍/chapter05_流程控制.html">
+            
+                <a href="../01_JAVA介绍/chapter05_流程控制.html">
+            
+                    
+                    chapter05_流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01_JAVA介绍/chapter06_数组.html">
+            
+                <a href="../01_JAVA介绍/chapter06_数组.html">
+            
+                    
+                    chapter06_数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01_JAVA介绍/chapter07_方法.html">
+            
+                <a href="../01_JAVA介绍/chapter07_方法.html">
+            
+                    
+                    chapter07_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    02_面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="chapter08_面向对象_1概述.html">
+            
+                <a href="chapter08_面向对象_1概述.html">
+            
+                    
+                    chapter08_面向对象_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="chapter08_面向对象_2包管理.html">
+            
+                <a href="chapter08_面向对象_2包管理.html">
+            
+                    
+                    chapter08_面向对象_2包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="chapter09_封装.html">
+            
+                <a href="chapter09_封装.html">
+            
+                    
+                    chapter09_封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="chapter10_单例模式.html">
+            
+                <a href="chapter10_单例模式.html">
+            
+                    
+                    chapter10_单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="chapter11_继承_1概述.html">
+            
+                <a href="chapter11_继承_1概述.html">
+            
+                    
+                    chapter11_继承_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="chapter11_继承_2抽象类.html">
+            
+                <a href="chapter11_继承_2抽象类.html">
+            
+                    
+                    chapter11_继承_2抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="chapter11_继承_3接口.html">
+            
+                <a href="chapter11_继承_3接口.html">
+            
+                    
+                    chapter11_继承_3接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="chapter12_多态.html">
+            
+                <a href="chapter12_多态.html">
+            
+                    
+                    chapter12_多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.9" data-path="chapter13_内部类.html">
+            
+                <a href="chapter13_内部类.html">
+            
+                    
+                    chapter13_内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="chapter14_包装类.html">
+            
+                <a href="chapter14_包装类.html">
+            
+                    
+                    chapter14_包装类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="chapter15_常用类_1Object.html">
+            
+                <a href="chapter15_常用类_1Object.html">
+            
+                    
+                    chapter15_常用类_1Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="chapter15_常用类_2String.html">
+            
+                <a href="chapter15_常用类_2String.html">
+            
+                    
+                    chapter15_常用类_2String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03_常用工具/">
+            
+                <a href="../03_常用工具/">
+            
+                    
+                    03_常用工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_常用工具/chapter16_异常_1概述.html">
+            
+                <a href="../03_常用工具/chapter16_异常_1概述.html">
+            
+                    
+                    chapter16_异常_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_常用工具/chapter16_异常_2处理_trycatch.html">
+            
+                <a href="../03_常用工具/chapter16_异常_2处理_trycatch.html">
+            
+                    
+                    chapter16_异常_2处理_trycatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03_常用工具/chapter16_异常_3处理throw.html">
+            
+                <a href="../03_常用工具/chapter16_异常_3处理throw.html">
+            
+                    
+                    chapter16_异常_3处理throw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03_常用工具/chapter16_异常_4处理自定义.html">
+            
+                <a href="../03_常用工具/chapter16_异常_4处理自定义.html">
+            
+                    
+                    chapter16_异常_4处理自定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03_常用工具/chapter17_多线程_1概述.html">
+            
+                <a href="../03_常用工具/chapter17_多线程_1概述.html">
+            
+                    
+                    chapter17_多线程_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03_常用工具/chapter17_多线程_2线程生命周期.html">
+            
+                <a href="../03_常用工具/chapter17_多线程_2线程生命周期.html">
+            
+                    
+                    chapter17_多线程_2线程生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03_常用工具/chapter17_多线程_3线程管理同步和通信.html">
+            
+                <a href="../03_常用工具/chapter17_多线程_3线程管理同步和通信.html">
+            
+                    
+                    chapter17_多线程_3线程管理同步和通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03_常用工具/chapter18_IO流.html">
+            
+                <a href="../03_常用工具/chapter18_IO流.html">
+            
+                    
+                    chapter18_IO流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03_常用工具/chapter19_集合_1概述.html">
+            
+                <a href="../03_常用工具/chapter19_集合_1概述.html">
+            
+                    
+                    chapter19_集合_1概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../03_常用工具/chapter19_集合_2List.html">
+            
+                <a href="../03_常用工具/chapter19_集合_2List.html">
+            
+                    
+                    chapter19_集合_2List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../03_常用工具/chapter19_集合_3Set.html">
+            
+                <a href="../03_常用工具/chapter19_集合_3Set.html">
+            
+                    
+                    chapter19_集合_3Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../03_常用工具/chapter19_集合_4Map.html">
+            
+                <a href="../03_常用工具/chapter19_集合_4Map.html">
+            
+                    
+                    chapter19_集合_4Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../03_常用工具/chapter19_集合_5泛型.html">
+            
+                <a href="../03_常用工具/chapter19_集合_5泛型.html">
+            
+                    
+                    chapter19_集合_5泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../03_常用工具/chapter19_集合_6集合工具类.html">
+            
+                <a href="../03_常用工具/chapter19_集合_6集合工具类.html">
+            
+                    
+                    chapter19_集合_6集合工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >chapter13_内部类</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+</blockquote>
+<p>&#x5728;Java&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x7C7B;&#x5B9A;&#x4E49;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#x91CC;&#x9762;&#xFF0C;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x7C7B;&#x79F0;&#x4E3A;&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;&#x5305;&#x542B;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x7C7B;&#x79F0;&#x4E3A;&#x5916;&#x90E8;&#x7C7B;&#x3002;  </p>
+<p>&#x5F53;&#x63CF;&#x8FF0;&#x4E8B;&#x7269;&#x65F6;, &#x4E8B;&#x7269;&#x7684;&#x5185;&#x90E8;&#x8FD8;&#x6709;&#x4E8B;&#x7269;,&#x8BE5;&#x4E8B;&#x7269;&#x7528;&#x5185;&#x90E8;&#x7C7B;&#x6765;&#x63CF;&#x8FF0; -- &#x5185;&#x90E8;&#x4E8B;&#x7269;&#x5728;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x4E8B;&#x7269;&#x7684;&#x5185;&#x5BB9;  </p>
+<h2 id="&#x4E00;-&#x5185;&#x90E8;&#x7C7B;&#x7279;&#x70B9;">&#x4E00;. &#x5185;&#x90E8;&#x7C7B;&#x7279;&#x70B9;</h2>
+<blockquote>
+<p>&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;, &#x6240;&#x5904;&#x4F4D;&#x7F6E;</p>
+</blockquote>
+<h4 id="1-&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;">1. &#x8BBF;&#x95EE;&#x65B9;&#x5F0F;</h4>
+<p>&#x5185;&#x90E8;&#x7C7B;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5916;&#x90E8;&#x7C7B;&#x4E2D;&#x7684;&#x6210;&#x5458;,&#x5305;&#x62EC;&#x79C1;&#x6709;&#x6210;&#x5458;&#x3002;(&#x56E0;&#x4E3A;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B; -- &#x5916;&#x90E8;&#x7C7B;&#x540D;.this)<br>&#x800C;&#x5916;&#x90E8;&#x7C7B;&#x8981;&#x8BBF;&#x95EE;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x7684;&#x6210;&#x5458;&#x5FC5;&#x987B;&#x8981;&#x5EFA;&#x7ACB;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x3002;  </p>
+<h4 id="2-&#x4F4D;&#x7F6E;">2. &#x4F4D;&#x7F6E;</h4>
+<p><strong>Java&#x4E2D;&#x7684;&#x5185;&#x90E8;&#x7C7B;&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x56DB;&#x79CD;&#xFF1A;&#x6210;&#x5458;&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x3002;</strong>  </p>
+<h4 id="3-&#x8BBF;&#x95EE;&#x987A;&#x5E8F;">3. &#x8BBF;&#x95EE;&#x987A;&#x5E8F;</h4>
+<p>&#x5185;&#x90E8;&#x7C7B;&#x5C40;&#x90E8;&#x53D8;&#x91CF; -- &#x5185;&#x90E8;&#x6210;&#x5458;&#x53D8;&#x91CF; -- &#x5916;&#x90E8;&#x7C7B;  </p>
+<h4 id="4-&#x4FEE;&#x9970;&#x7B26;">4. &#x4FEE;&#x9970;&#x7B26;</h4>
+<p>&#x5185;&#x90E8;&#x7C7B;&#x53EF;&#x4FEE;&#x9970;&#x4E3A;<code>private</code>, &#x5728;&#x5916;&#x90E8;&#x7C7B;&#x4E2D;&#x5B9E;&#x73B0;&#x66F4;&#x597D;&#x7684;&#x5C01;&#x88C5;. -- &#x53EA;&#x6709;&#x6210;&#x5458;&#x5185;&#x90E8;&#x7C7B;&#x53EF;&#x4EE5;&#x52A0;&#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;.  </p>
+<h2 id="&#x4E8C;-&#x6210;&#x5458;&#x5185;&#x90E8;&#x7C7B;">&#x4E8C;. &#x6210;&#x5458;&#x5185;&#x90E8;&#x7C7B;</h2>
+<p>&#x6210;&#x5458;&#x5185;&#x90E8;&#x7C7B;&#x662F;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x53C8;&#x79F0;&#x666E;&#x901A;&#x5185;&#x90E8;&#x7C7B;&#x3002;  </p>
+<h4 id="1-&#x83B7;&#x53D6;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;">1. &#x83B7;&#x53D6;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;</h4>
+<p>&#x5185;&#x90E8;&#x7C7B;&#x5728;&#x7C7B;&#x5916;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x5B9E;&#x4F8B;&#x5316;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;&#x5916;&#x90E8;&#x4FE1;&#x606F;&#x624D;&#x80FD;&#x5B9E;&#x4F8B;&#x5316;&#x3002;   </p>
+<pre><code class="lang-java">    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;  &#x65B9;&#x6CD5;&#x4E00;&#xFF1A;new &#x5916;&#x90E8;&#x7C7B; new &#x5185;&#x90E8;&#x7C7B;</span>
+        Person.Heart myheart = <span class="hljs-keyword">new</span> Person().new Heart();
+        String str = myheart.beat();
+        System.out.println(str);
+
+        <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;  &#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x5916;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;.new &#x5185;&#x90E8;&#x7C7B;</span>
+        Person.Heart myheart1 = tom.new Heart();
+        String str2 = myheart.beat();
+        System.out.println(str2);
+
+        <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;  &#x65B9;&#x6CD5;&#x4E09;&#xFF1A;&#x5916;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;.getHeart()</span>
+        Person.Heart myheart3 = tom.getHeart();
+        String str3 = myheart.beat();
+        System.out.println(str3);
+</code></pre>
+<h4 id="2-&#x5185;&#x90E8;&#x7C7B;--&#x5916;&#x90E8;&#x7C7B;">2. &#x5185;&#x90E8;&#x7C7B; &amp;&amp; &#x5916;&#x90E8;&#x7C7B;</h4>
+<ol>
+<li>&#x5185;&#x90E8;&#x7C7B;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5916;&#x90E8;&#x7C7B;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x540C;&#x540D;&#xFF0C;&#x4F18;&#x5148;&#x8BBF;&#x95EE;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x3002;  </li>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<strong>&#x5916;&#x90E8;&#x7C7B;.this.&#x6210;&#x5458;</strong>&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x5916;&#x90E8;&#x7C7B;&#x4E2D;&#x540C;&#x540D;&#x4FE1;&#x606F;</li>
+<li>&#x5916;&#x90E8;&#x7C7B;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5185;&#x90E8;&#x7C7B;&#x4FE1;&#x606F;&#xFF0C;&#x8981;&#x901A;&#x8FC7;&#x5185;&#x90E8;&#x7C7B;&#x5B9E;&#x4F8B;&#x624D;&#x80FD;&#x8BBF;&#x95EE;<br><a href="https://github.com/EasterFan/JavaExercise/blob/master/innerClass/src/com/easter/member/Person.java" target="_blank">&#x6210;&#x5458;&#x5185;&#x90E8;&#x7C7B;</a></li>
+</ol>
+<h2 id="&#x4E09;-&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;">&#x4E09;. &#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;</h2>
+<h4 id="1-&#x83B7;&#x53D6;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;">1. &#x83B7;&#x53D6;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</h4>
+<p>&#x88AB;static&#x4FEE;&#x9970;&#x7684;&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#x662F;&#x7C7B;&#x5171;&#x4EAB;&#x7684;&#xFF0C;&#x6545;<strong>&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E;&#x5916;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x76F4;&#x63A5;&#x521B;&#x5EFA;</strong>  </p>
+<pre><code class="lang-java">    Person.Heart myheart = <span class="hljs-keyword">new</span> Person.Heart();
+        myheart.beat();
+</code></pre>
+<h4 id="2-&#x5185;&#x90E8;&#x7C7B;--&#x5916;&#x90E8;&#x7C7B;">2. &#x5185;&#x90E8;&#x7C7B; &amp;&amp; &#x5916;&#x90E8;&#x7C7B;</h4>
+<ol>
+<li>&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x53EA;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5916;&#x90E8;&#x7C7B;&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#xFF0C;&#x975E;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x8981;&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x8C03;&#x7528;  </li>
+<li>&#x5916;&#x90E8;&#x7C7B;&#x901A;&#x8FC7;<strong>&#x5916;&#x90E8;&#x7C7B;.&#x5185;&#x90E8;&#x7C7B;.&#x9759;&#x6001;&#x6210;&#x5458;</strong>&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x7684;&#x9759;&#x6001;&#x6210;&#x5458;&#x3002;&#x901A;&#x8FC7;<strong>new Person().age</strong>&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;&#x5916;&#x90E8;&#x7C7B;&#x975E;&#x9759;&#x6001;&#x5C5E;&#x6027;</li>
+<li>&#x5185;&#x90E8;&#x7C7B;&#x548C;&#x5916;&#x90E8;&#x7C7B;&#x9759;&#x6001;&#x5C5E;&#x6027;&#x540C;&#x540D;&#x65F6;&#xFF0C;&#x4F18;&#x5148;&#x8BBF;&#x95EE;&#x5185;&#x90E8;&#x7C7B;&#x5C5E;&#x6027;&#xFF0C;&#x4E5F;&#x53EF;&#x901A;&#x8FC7;<strong>Person.age</strong>&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;&#x5916;&#x90E8;&#x7C7B;&#x9759;&#x6001;&#x6210;&#x5458;  </li>
+<li>&#x5F53;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x6709;&#x9759;&#x6001;&#x6210;&#x5458;&#x65F6;,&#x8BE5;&#x5185;&#x90E8;&#x7C7B;&#x5FC5;&#x987B;&#x662F;&#x9759;&#x6001;&#x7C7B;.</li>
+<li>&#x5F53;&#x5916;&#x90E8;&#x7C7B;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;&#x5185;&#x90E8;&#x7C7B;&#x65F6;,&#x8BE5;&#x5185;&#x90E8;&#x7C7B;&#x5FC5;&#x987B;&#x662F;&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;<br><a href="https://github.com/EasterFan/JavaExercise/blob/master/innerClass/src/com/easter/staticinner/Person.java" target="_blank">&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;</a></li>
+</ol>
+<h2 id="&#x56DB;-&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;">&#x56DB;. &#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;</h2>
+<h4 id="1-&#x83B7;&#x53D6;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;">1. &#x83B7;&#x53D6;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</h4>
+<p>&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x4EA7;&#x751F;&#x5BF9;&#x8C61;<br>&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x610F;&#x4E49;&#xFF1A;<br>&#x4E00;&#x662F;&#x53EF;&#x4EE5;&#x9690;&#x85CF;&#xFF0C;&#x4E8C;&#x662F;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x751F;&#x547D;&#x5468;&#x671F;&#x4EC5;&#x5728;&#x65B9;&#x6CD5;&#x91CC;&#x6709;&#x6548;&#xFF0C;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#x5C31;&#x4F1A;&#x9500;&#x6BC1;&#x3002;  </p>
+<h4 id="2-&#x4E00;&#x4E9B;&#x9650;&#x5236;">2. &#x4E00;&#x4E9B;&#x9650;&#x5236;</h4>
+<ol>
+<li>&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#x662F;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5185;</li>
+<li>&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x4E0D;&#x80FD;&#x5B9A;&#x4E49;&#x9759;&#x6001;&#x6210;&#x5458;</li>
+<li>&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;&#x4E0D;&#x80FD;&#x7528;public/private/protected&#x4FEE;&#x9970;</li>
+<li>&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;abstract&#x7C7B;&#x4FEE;&#x9970;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x80FD;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x4E86;</li>
+<li>&#x5185;&#x90E8;&#x7C7B;&#x5B9A;&#x4E49;&#x5728;&#x7C7B;&#x4E2D;&#x7684;&#x5C40;&#x90E8;&#x4F4D;&#x7F6E;&#x65F6;,&#x53EA;&#x80FD;&#x8BBF;&#x95EE;&#x8BE5;&#x5C40;&#x90E8;&#x88AB;final&#x4FEE;&#x9970;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;.<br><a href="https://github.com/EasterFan/JavaExercise/blob/master/innerClass/src/com/easter/function/Person.java" target="_blank">&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7C7B;</a><h3 id="&#x4E94;-&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;">&#x4E94;. &#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;</h3>
+<h4 id="&#x610F;&#x4E49;">&#x610F;&#x4E49;</h4>
+&#x4E00;&#x662F;&#x4E3A;&#x4E86;&#x9690;&#x85CF;&#xFF0C;&#x4E8C;&#x662F;&#x5728;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E2D;&#x53EA;&#x4F7F;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x5C06;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x4E0E;&#x6784;&#x5EFA;&#x653E;&#x5230;&#x4E00;&#x8D77;&#x5B8C;&#x6210;&#xFF0C;&#x7B80;&#x5316;&#x7C7B;&#x7684;&#x7F16;&#x5199;&#xFF0C;&#x5185;&#x5B58;&#x53CB;&#x597D;&#x3002;  </li>
+</ol>
+<pre><code class="lang-java">  test2.getRead(<span class="hljs-keyword">new</span> Person() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;&#x6211;&#x662F;&#x8BFB;&#x4E66;&#x7684;&#x5C0F;&#x660E;&quot;</span>);
+            }
+        });
+</code></pre>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<ol>
+<li>&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;private/public/protected/abstract/static/&#x4FEE;&#x9970;</li>
+<li>&#x56E0;&#x4E3A;&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x6CA1;&#x6709;&#x540D;&#x5B57;&#xFF0C;&#x6545;&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x6CA1;&#x6709;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>&#x6784;&#x9020;&#x4EE3;&#x7801;&#x5757;</code>&#x5B8C;&#x6210;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;</li>
+<li>&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x4E0D;&#x80FD;&#x51FA;&#x73B0;&#x9759;&#x6001;&#x6210;&#x5458;</li>
+<li>&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x4F7F;&#x7528;&#x524D;&#x63D0;:<br>&#x5185;&#x90E8;&#x7C7B;&#x5FC5;&#x987B;&#x7EE7;&#x627F;&#x4E00;&#x4E2A;&#x7C7B;,&#x6216;&#x8005;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;.(&#x9664;&#x975E;&#x4F7F;&#x7528;&#x5947;&#x6DEB;&#x6280;&#x5DE7;)  </li>
+<li>&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x5C31;&#x662F;&#x4E00;&#x4E2A;<strong>&#x533F;&#x540D;&#x5B50;&#x7C7B;&#x5BF9;&#x8C61;</strong>,&#x800C;&#x4E14;&#x8FD9;&#x4E2A;&#x5B50;&#x7C7B;&#x6709;&#x70B9;&#x80D6;</li>
+<li>&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x683C;&#x5F0F;: new &#x7236;&#x7C7B;&#x6216;&#x8005;&#x63A5;&#x53E3;(){&#x5B9A;&#x4E49;&#x5B50;&#x7C7B;&#x7684;&#x5185;&#x5BB9;}</li>
+<li>&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x6700;&#x597D;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;3&#x4E2A; -- &#x7B80;&#x5316;&#x4EE3;&#x7801;</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x65E2;&#x6CA1;&#x6709;&#x7EE7;&#x627F;&#x4E5F;&#x6CA1;&#x6709;&#x63A5;&#x53E3;,&#x4F7F;&#x7528;&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x5947;&#x6DEB;&#x6280;&#x5DE7; -- Object</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InnerTest</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        <span class="hljs-comment">// &#x6240;&#x6709;&#x5BF9;&#x8C61;&#x90FD;&#x662F; Object &#x5B50;&#x7C7B;</span>
+        <span class="hljs-keyword">new</span> Object(){
+            <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">function</span><span class="hljs-params">()</span></span>{
+                System.out.println(<span class="hljs-string">&quot;function run&quot;</span>);
+            }
+        }.function();
+    }
+}
+</code></pre>
+<p><a href="https://github.com/EasterFan/JavaExercise/blob/master/innerClass/src/com/easter/anonymous/Person.java" target="_blank">&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B; -- &#x7EE7;&#x627F;</a><br><a href="https://github.com/EasterFan/JavaExercise/blob/master/innerClass/src/com/easter/anonymous/InnerClassTest.java" target="_blank">&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B; -- &#x63A5;&#x53E3;</a>  </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter12_多态.html" class="navigation navigation-prev " aria-label="Previous page: chapter12_多态">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter14_包装类.html" class="navigation navigation-next " aria-label="Next page: chapter14_包装类">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"chapter13_内部类","level":"1.3.9","depth":2,"next":{"title":"chapter14_包装类","level":"1.3.10","depth":2,"path":"02_面向对象/chapter14_包装类.md","ref":"02_面向对象/chapter14_包装类.md","articles":[]},"previous":{"title":"chapter12_多态","level":"1.3.8","depth":2,"path":"02_面向对象/chapter12_多态.md","ref":"02_面向对象/chapter12_多态.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02_面向对象/chapter13_内部类.md","mtime":"2018-03-12T10:21:03.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-21T04:09:57.821Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
